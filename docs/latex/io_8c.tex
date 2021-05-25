@@ -1,0 +1,78 @@
+\hypertarget{io_8c}{}\doxysection{io.\+c File Reference}
+\label{io_8c}\index{io.c@{io.c}}
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for io.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{io_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{io_8c_a3e36564ae4e5e4bbcab862ae80aedc8c}{readln}} (int fd, ssize\+\_\+t max)
+\item 
+char $\ast$ \mbox{\hyperlink{io_8c_a133b4fecccc62ec9df50f27554da0dfb}{convert\+\_\+argv\+\_\+to\+\_\+v}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, int max)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{io_8c_a133b4fecccc62ec9df50f27554da0dfb}\label{io_8c_a133b4fecccc62ec9df50f27554da0dfb}} 
+\index{io.c@{io.c}!convert\_argv\_to\_v@{convert\_argv\_to\_v}}
+\index{convert\_argv\_to\_v@{convert\_argv\_to\_v}!io.c@{io.c}}
+\doxysubsubsection{\texorpdfstring{convert\_argv\_to\_v()}{convert\_argv\_to\_v()}}
+{\footnotesize\ttfamily char$\ast$ convert\+\_\+argv\+\_\+to\+\_\+v (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{io_8c_source_l00021}{21}} of file \mbox{\hyperlink{io_8c_source}{io.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022 \{}
+\DoxyCodeLine{00023   \textcolor{keywordtype}{char} \textcolor{keyword}{static} \textcolor{keyword}{new}[2048];}
+\DoxyCodeLine{00024   \textcolor{keywordtype}{int} c = 0;}
+\DoxyCodeLine{00025   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < max; i++)}
+\DoxyCodeLine{00026   \{}
+\DoxyCodeLine{00027     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; argv[i][j] != 0; j++)}
+\DoxyCodeLine{00028       \textcolor{keyword}{new}[c++] = argv[i][j];}
+\DoxyCodeLine{00029     \textcolor{keywordflow}{if} (i < argc -\/ 1)}
+\DoxyCodeLine{00030       \textcolor{keyword}{new}[c++] = \textcolor{charliteral}{' '};}
+\DoxyCodeLine{00031   \}}
+\DoxyCodeLine{00032   \textcolor{keyword}{new}[c] = 0;}
+\DoxyCodeLine{00033   \textcolor{keywordflow}{return} \textcolor{keyword}{new};}
+\DoxyCodeLine{00034 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{io_8c_a3e36564ae4e5e4bbcab862ae80aedc8c}\label{io_8c_a3e36564ae4e5e4bbcab862ae80aedc8c}} 
+\index{io.c@{io.c}!readln@{readln}}
+\index{readln@{readln}!io.c@{io.c}}
+\doxysubsubsection{\texorpdfstring{readln()}{readln()}}
+{\footnotesize\ttfamily char$\ast$ readln (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{ssize\+\_\+t}]{max }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{io_8c_source_l00006}{6}} of file \mbox{\hyperlink{io_8c_source}{io.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006                                  \{}
+\DoxyCodeLine{00007   \textcolor{keywordtype}{char} b;}
+\DoxyCodeLine{00008   \textcolor{keywordtype}{char} \textcolor{keyword}{static} \textcolor{keyword}{new}[2048];}
+\DoxyCodeLine{00009   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} c = 0;}
+\DoxyCodeLine{00010   \textcolor{keywordtype}{long} l = 0;}
+\DoxyCodeLine{00011   \textcolor{keywordtype}{long} r;}
+\DoxyCodeLine{00012   \textcolor{keywordflow}{while} ((r = read(fd,\&b,1)) == -\/1 \&\& errno==EINTR)\{}
+\DoxyCodeLine{00013     \textcolor{keyword}{new}[c++] = b;}
+\DoxyCodeLine{00014     \textcolor{keywordflow}{if} (b == \textcolor{charliteral}{'\(\backslash\)n'})\{}
+\DoxyCodeLine{00015       \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00016     \}}
+\DoxyCodeLine{00017   \}}
+\DoxyCodeLine{00018   \textcolor{keywordflow}{return} realloc(\textcolor{keyword}{new},c);}
+\DoxyCodeLine{00019 \}}
+
+\end{DoxyCode}

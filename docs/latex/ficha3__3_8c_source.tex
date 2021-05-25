@@ -1,0 +1,21 @@
+\hypertarget{ficha3__3_8c_source}{}\doxysection{ficha3\+\_\+3.\+c}
+\label{ficha3__3_8c_source}\index{ficha3\_3.c@{ficha3\_3.c}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{\Hypertarget{ficha3__3_8c_source_l00004}\mbox{\hyperlink{ficha3__3_8c_a0ddf1224851353fc92bfbff6f499fa97}{00004}} \textcolor{keywordtype}{int} \mbox{\hyperlink{ficha3__3_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[])}
+\DoxyCodeLine{00005 \{}
+\DoxyCodeLine{00006   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i < argc; i++)}
+\DoxyCodeLine{00007     \{}
+\DoxyCodeLine{00008       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; argv[i][j] != 0; j++)}
+\DoxyCodeLine{00009         write (STDOUT\_FILENO, \&argv[i][j], 1);}
+\DoxyCodeLine{00010       \textcolor{keywordflow}{if} (i < argc -\/ 1)}
+\DoxyCodeLine{00011         write (STDOUT\_FILENO, \textcolor{stringliteral}{" "}, 1);}
+\DoxyCodeLine{00012     \}}
+\DoxyCodeLine{00013   write (STDOUT\_FILENO, \textcolor{stringliteral}{"\(\backslash\)n"}, 1);}
+\DoxyCodeLine{00014   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00015 \}}
+
+\end{DoxyCode}

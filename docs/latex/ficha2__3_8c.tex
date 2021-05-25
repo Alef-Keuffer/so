@@ -1,0 +1,54 @@
+\hypertarget{ficha2__3_8c}{}\doxysection{ficha2\+\_\+3.\+c File Reference}
+\label{ficha2__3_8c}\index{ficha2\_3.c@{ficha2\_3.c}}
+{\ttfamily \#include $<$sys/wait.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for ficha2\+\_\+3.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{ficha2__3_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{ficha2__3_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em Programa que cria dez processos filhos que executam sequencialmente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ficha2__3_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{ficha2__3_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{ficha2\_3.c@{ficha2\_3.c}!main@{main}}
+\index{main@{main}!ficha2\_3.c@{ficha2\_3.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Programa que cria dez processos filhos que executam sequencialmente. 
+
+\begin{DoxyItemize}
+\item Os filhos imprimem o seu P\+ID e o do seu pai, e finalmente, terminam a sua execução. \item O valor de saida de cada filho é igual ao seu numero de ordem (e.\+g.\+: primeiro filho criado termina com o valor 1). \item O pai imprime o codigo de saida de cada um dos seus filhos. \end{DoxyItemize}
+
+
+Definition at line \mbox{\hyperlink{ficha2__3_8c_source_l00013}{13}} of file \mbox{\hyperlink{ficha2__3_8c_source}{ficha2\+\_\+3.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013                \{}
+\DoxyCodeLine{00014     \textcolor{keywordtype}{int} status;}
+\DoxyCodeLine{00015     \textcolor{keywordtype}{int} nFilhos = 10;}
+\DoxyCodeLine{00016     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < nFilhos; i++) \{}
+\DoxyCodeLine{00017         \textcolor{keywordflow}{if} (fork() == 0) \{\textcolor{comment}{// Child does something}}
+\DoxyCodeLine{00018             fprintf(stderr, \textcolor{stringliteral}{"My father's PID: \%d\(\backslash\)nMy PID: \%d\(\backslash\)n\(\backslash\)n"}, getppid(), getpid());}
+\DoxyCodeLine{00019             \_exit(i);}
+\DoxyCodeLine{00020         \} \textcolor{keywordflow}{else} \{\textcolor{comment}{// Parent does something}}
+\DoxyCodeLine{00021             pid\_t wait\_ret = wait(\&status);}
+\DoxyCodeLine{00022             fprintf(stderr, \textcolor{stringliteral}{"Filho \%d saiu com código \%d\(\backslash\)n\(\backslash\)n"}, wait\_ret, WEXITSTATUS(status));}
+\DoxyCodeLine{00023         \}}
+\DoxyCodeLine{00024     \}}
+\DoxyCodeLine{00025     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00026 \}}
+
+\end{DoxyCode}

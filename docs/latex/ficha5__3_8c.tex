@@ -1,0 +1,132 @@
+\hypertarget{ficha5__3_8c}{}\doxysection{ficha5\+\_\+3.\+c File Reference}
+\label{ficha5__3_8c}\index{ficha5\_3.c@{ficha5\_3.c}}
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$sys/wait.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+Include dependency graph for ficha5\+\_\+3.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ficha5__3_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ficha5__3_8c_a706068f562dd5c64a8b7bbd4b2298dd1}{M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+S\+I\+ZE}}~1024
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ssize\+\_\+t \mbox{\hyperlink{ficha5__3_8c_a272fb8898b4628b042687a61f5770fda}{readln}} (int fildes, void $\ast$buf, size\+\_\+t nbyte)
+\item 
+int \mbox{\hyperlink{ficha5__3_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ficha5__3_8c_a706068f562dd5c64a8b7bbd4b2298dd1}\label{ficha5__3_8c_a706068f562dd5c64a8b7bbd4b2298dd1}} 
+\index{ficha5\_3.c@{ficha5\_3.c}!MAX\_LINE\_SIZE@{MAX\_LINE\_SIZE}}
+\index{MAX\_LINE\_SIZE@{MAX\_LINE\_SIZE}!ficha5\_3.c@{ficha5\_3.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_LINE\_SIZE}{MAX\_LINE\_SIZE}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+S\+I\+ZE~1024}
+
+
+
+Definition at line \mbox{\hyperlink{ficha5__3_8c_source_l00006}{6}} of file \mbox{\hyperlink{ficha5__3_8c_source}{ficha5\+\_\+3.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ficha5__3_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{ficha5__3_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{ficha5\_3.c@{ficha5\_3.c}!main@{main}}
+\index{main@{main}!ficha5\_3.c@{ficha5\_3.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ficha5__3_8c_source_l00024}{24}} of file \mbox{\hyperlink{ficha5__3_8c_source}{ficha5\+\_\+3.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024                                  \{}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{00026   ssize\_t res = 0;}
+\DoxyCodeLine{00027   \textcolor{keywordtype}{int} p[2];}
+\DoxyCodeLine{00028   \textcolor{keywordtype}{char} buffer[\mbox{\hyperlink{ficha5__3_8c_a706068f562dd5c64a8b7bbd4b2298dd1}{MAX\_LINE\_SIZE}}];}
+\DoxyCodeLine{00029   \textcolor{keywordtype}{int} pid;}
+\DoxyCodeLine{00030   \textcolor{keywordtype}{int} status;}
+\DoxyCodeLine{00031 }
+\DoxyCodeLine{00032   \textcolor{keywordflow}{if} (pipe(p) != 0) \{}
+\DoxyCodeLine{00033     perror(\textcolor{stringliteral}{"pipe"});}
+\DoxyCodeLine{00034     \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00035   \}}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037   \textcolor{keywordflow}{switch} ((pid = fork())) \{}
+\DoxyCodeLine{00038     \textcolor{keywordflow}{case} -\/1: perror(\textcolor{stringliteral}{"fork"});}
+\DoxyCodeLine{00039       \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00040     \textcolor{keywordflow}{case} 0: close(p[1]);}
+\DoxyCodeLine{00041       dup2(p[0], 0);}
+\DoxyCodeLine{00042       close(p[0]);}
+\DoxyCodeLine{00043       res = execlp(\textcolor{stringliteral}{"wc"}, \textcolor{stringliteral}{"wc"}, NULL);}
+\DoxyCodeLine{00044       \_exit(0);}
+\DoxyCodeLine{00045 }
+\DoxyCodeLine{00046     \textcolor{keywordflow}{default}: close(p[0]);}
+\DoxyCodeLine{00047       close(1);}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00049       \textcolor{keywordflow}{while} ((res = \mbox{\hyperlink{ficha5__3_8c_a272fb8898b4628b042687a61f5770fda}{readln}}(0, buffer, \mbox{\hyperlink{ficha5__3_8c_a706068f562dd5c64a8b7bbd4b2298dd1}{MAX\_LINE\_SIZE}})) > 0) \{}
+\DoxyCodeLine{00050         write(p[1], buffer, res);}
+\DoxyCodeLine{00051       \}}
+\DoxyCodeLine{00052       close(p[1]);}
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00054       \textcolor{keywordflow}{if} (wait(\&status) < 0) \{}
+\DoxyCodeLine{00055         perror(\textcolor{stringliteral}{"wait"});}
+\DoxyCodeLine{00056         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{00057       \}}
+\DoxyCodeLine{00058       \textcolor{keywordflow}{if} (status < 0) \{}
+\DoxyCodeLine{00059         perror(\textcolor{stringliteral}{"Filho"});}
+\DoxyCodeLine{00060       \}}
+\DoxyCodeLine{00061   \}}
+\DoxyCodeLine{00062   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00063 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{ficha5__3_8c_source_l00006}{M\+A\+X\+\_\+\+L\+I\+N\+E\+\_\+\+S\+I\+ZE}}, and \mbox{\hyperlink{ficha5__3_8c_source_l00008}{readln()}}.
+
+\mbox{\Hypertarget{ficha5__3_8c_a272fb8898b4628b042687a61f5770fda}\label{ficha5__3_8c_a272fb8898b4628b042687a61f5770fda}} 
+\index{ficha5\_3.c@{ficha5\_3.c}!readln@{readln}}
+\index{readln@{readln}!ficha5\_3.c@{ficha5\_3.c}}
+\doxysubsubsection{\texorpdfstring{readln()}{readln()}}
+{\footnotesize\ttfamily ssize\+\_\+t readln (\begin{DoxyParamCaption}\item[{int}]{fildes,  }\item[{void $\ast$}]{buf,  }\item[{size\+\_\+t}]{nbyte }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ficha5__3_8c_source_l00008}{8}} of file \mbox{\hyperlink{ficha5__3_8c_source}{ficha5\+\_\+3.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008                                                     \{}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010   ssize\_t res = 0;}
+\DoxyCodeLine{00011   \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013   \textcolor{keywordflow}{while} (i < nbyte \&\& (res = read(fildes, \&buf[i], 1)) > 0) \{}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{00015     \textcolor{keywordflow}{if} (((\textcolor{keywordtype}{char} *)buf)[i] == \textcolor{charliteral}{'\(\backslash\)n'}) \{}
+\DoxyCodeLine{00016       \textcolor{keywordflow}{return} i + 1;}
+\DoxyCodeLine{00017     \}}
+\DoxyCodeLine{00018     i += res;}
+\DoxyCodeLine{00019   \}}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021   \textcolor{keywordflow}{return} i;}
+\DoxyCodeLine{00022 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{ficha5__3_8c_source_l00024}{main()}}.
+

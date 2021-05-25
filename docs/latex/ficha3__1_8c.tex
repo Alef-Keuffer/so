@@ -1,0 +1,41 @@
+\hypertarget{ficha3__1_8c}{}\doxysection{ficha3\+\_\+1.\+c File Reference}
+\label{ficha3__1_8c}\index{ficha3\_1.c@{ficha3\_1.c}}
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for ficha3\+\_\+1.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{ficha3__1_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{ficha3__1_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ficha3__1_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{ficha3__1_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{ficha3\_1.c@{ficha3\_1.c}!main@{main}}
+\index{main@{main}!ficha3\_1.c@{ficha3\_1.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ficha3__1_8c_source_l00004}{4}} of file \mbox{\hyperlink{ficha3__1_8c_source}{ficha3\+\_\+1.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004               \{}
+\DoxyCodeLine{00005   \textcolor{keywordtype}{int} ret;}
+\DoxyCodeLine{00006   \textcolor{comment}{//Como ls é uma váriavel de ambiente, não é precisso dar o caminho completo}}
+\DoxyCodeLine{00007   ret = execl(\textcolor{stringliteral}{"/bin/ls"}, \textcolor{stringliteral}{"ls"}, \textcolor{stringliteral}{"-\/l"}, \textcolor{stringliteral}{"-\/a"}, NULL);}
+\DoxyCodeLine{00008   printf(\textcolor{stringliteral}{"Se tudo ocorreu bem, esse printf nunca acontece\(\backslash\)n"});}
+\DoxyCodeLine{00009   perror(\textcolor{stringliteral}{"Erro"});}
+\DoxyCodeLine{00010   \textcolor{keywordflow}{return} ret;}
+\DoxyCodeLine{00011 \}}
+
+\end{DoxyCode}

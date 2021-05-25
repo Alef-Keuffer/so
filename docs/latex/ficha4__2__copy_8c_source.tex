@@ -1,0 +1,45 @@
+\hypertarget{ficha4__2__copy_8c_source}{}\doxysection{ficha4\+\_\+2\+\_\+copy.\+c}
+\label{ficha4__2__copy_8c_source}\index{ficha4\_2\_copy.c@{ficha4\_2\_copy.c}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include <fcntl.h>}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{\Hypertarget{ficha4__2__copy_8c_source_l00005}\mbox{\hyperlink{ficha4__2__copy_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{00005}} \textcolor{keywordtype}{int} \mbox{\hyperlink{ficha4__2__copy_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()}
+\DoxyCodeLine{00006 \{}
+\DoxyCodeLine{00007   printf(\textcolor{stringliteral}{"\%u\(\backslash\)n"}, S\_IRUSR | S\_IWUSR | S\_IRGRP | S\_IWGRP | S\_IROTH);}
+\DoxyCodeLine{00008   printf(\textcolor{stringliteral}{"\%u\(\backslash\)n"}, S\_IRUSR);}
+\DoxyCodeLine{00009   printf(\textcolor{stringliteral}{"\%u\(\backslash\)n"},S\_IWUSR );}
+\DoxyCodeLine{00010   printf(\textcolor{stringliteral}{"\%u\(\backslash\)n"}, S\_IRGRP );}
+\DoxyCodeLine{00011   printf(\textcolor{stringliteral}{"\%u\(\backslash\)n"},  S\_IWGRP );}
+\DoxyCodeLine{00012   printf (\textcolor{stringliteral}{"\%u\(\backslash\)n"}, S\_IROTH);}
+\DoxyCodeLine{00013   \textcolor{keywordtype}{int} i\_fd = open (\textcolor{stringliteral}{"/etc/passwd"}, O\_RDONLY);}
+\DoxyCodeLine{00014   \textcolor{keywordtype}{int} o\_fd = open (\textcolor{stringliteral}{"saida.txt"}, O\_CREAT | O\_RDWR, 436);}
+\DoxyCodeLine{00015   \textcolor{keywordtype}{int} e\_fd = open (\textcolor{stringliteral}{"erros.txt"}, O\_CREAT | O\_RDWR, 958);}
+\DoxyCodeLine{00016   \textcolor{comment}{// 400 \string^ 200 \string^ ((400 \string^ 200) >> 3) \string^ (400 >>3 >>3)}}
+\DoxyCodeLine{00017   \textcolor{comment}{// 666 = 436 = 958}}
+\DoxyCodeLine{00018   \textcolor{comment}{// -\/rw-\/rw-\/r-\/-\/}}
+\DoxyCodeLine{00019   \textcolor{comment}{//int e\_fd = open ("erros.txt", O\_CREAT | O\_RDWR, S\_IRUSR | S\_IWUSR | S\_IRGRP | S\_IWGRP | S\_IROTH);}}
+\DoxyCodeLine{00020   \textcolor{comment}{//printf("\%d\(\backslash\)n", S\_IRUSR | S\_IWUSR | S\_IRGRP | S\_IWGRP | S\_IROTH);}}
+\DoxyCodeLine{00021   dup2 (i\_fd, STDIN\_FILENO);}
+\DoxyCodeLine{00022   dup2 (o\_fd, STDOUT\_FILENO);}
+\DoxyCodeLine{00023   dup2 (e\_fd, STDERR\_FILENO);}
+\DoxyCodeLine{00024 }
+\DoxyCodeLine{00025   close (i\_fd);}
+\DoxyCodeLine{00026   close (e\_fd);}
+\DoxyCodeLine{00027   close (o\_fd);}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029   \textcolor{keywordtype}{int} n\_lines = 10;}
+\DoxyCodeLine{00030   \textcolor{keywordtype}{char} c;}
+\DoxyCodeLine{00031   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n\_lines;)}
+\DoxyCodeLine{00032     \{}
+\DoxyCodeLine{00033       c = (char)getchar ();}
+\DoxyCodeLine{00034       \textcolor{keywordflow}{if} (c == \textcolor{charliteral}{'\(\backslash\)n'})}
+\DoxyCodeLine{00035         i++;}
+\DoxyCodeLine{00036       putchar(c);}
+\DoxyCodeLine{00037     \}}
+\DoxyCodeLine{00038   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00039 \}}
+
+\end{DoxyCode}

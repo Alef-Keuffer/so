@@ -1,0 +1,55 @@
+\hypertarget{ficha3__5_8c}{}\doxysection{ficha3\+\_\+5.\+c File Reference}
+\label{ficha3__5_8c}\index{ficha3\_5.c@{ficha3\_5.c}}
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$sys/wait.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}pid.\+h\char`\"{}}\newline
+Include dependency graph for ficha3\+\_\+5.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{ficha3__5_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{ficha3__5_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ficha3__5_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{ficha3__5_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{ficha3\_5.c@{ficha3\_5.c}!main@{main}}
+\index{main@{main}!ficha3\_5.c@{ficha3\_5.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ficha3__5_8c_source_l00008}{8}} of file \mbox{\hyperlink{ficha3__5_8c_source}{ficha3\+\_\+5.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009 \{}
+\DoxyCodeLine{00010   \textcolor{keywordtype}{int} status;}
+\DoxyCodeLine{00011   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i < argc; i++)}
+\DoxyCodeLine{00012     \{}
+\DoxyCodeLine{00013       \textcolor{keywordflow}{if} (fork () == 0)}
+\DoxyCodeLine{00014         \{}
+\DoxyCodeLine{00015           \mbox{\hyperlink{pid_8c_a1de2f412bb1bfbb6889b28ae1503e476}{print\_child\_report}}();}
+\DoxyCodeLine{00016           execlp (argv[i], argv[i], NULL);}
+\DoxyCodeLine{00017           \_exit (0);}
+\DoxyCodeLine{00018         \}}
+\DoxyCodeLine{00019     \}}
+\DoxyCodeLine{00020   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 1; i < argc; i++)}
+\DoxyCodeLine{00021     \{}
+\DoxyCodeLine{00022       wait (\&status);}
+\DoxyCodeLine{00023     \}}
+\DoxyCodeLine{00024   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00025 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{pid_8c_source_l00015}{print\+\_\+child\+\_\+report()}}.
+

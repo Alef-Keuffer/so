@@ -1,0 +1,100 @@
+\begin{theindex}
+
+  \item {call\_by\_string.c}, \hyperpage{3, 4}
+    \subitem {main}, \hyperpage{3}
+  \item {convert\_argv\_to\_v}
+    \subitem {io.c}, \hyperpage{24}
+
+  \indexspace
+
+  \item {ficha2\_2.c}, \hyperpage{5, 6}
+    \subitem {main}, \hyperpage{5}
+  \item {ficha2\_3.c}, \hyperpage{6, 7}
+    \subitem {main}, \hyperpage{6}
+  \item {ficha2\_4.c}, \hyperpage{7, 8}
+    \subitem {main}, \hyperpage{8}
+  \item {ficha2\_5.c}, \hyperpage{8}, \hyperpage{10}
+    \subitem {main}, \hyperpage{9}
+  \item {ficha3\_1.c}, \hyperpage{10, 11}
+    \subitem {main}, \hyperpage{10}
+  \item {ficha3\_2.c}, \hyperpage{11, 12}
+    \subitem {main}, \hyperpage{11}
+  \item {ficha3\_3.c}, \hyperpage{12, 13}
+    \subitem {main}, \hyperpage{13}
+  \item {ficha3\_4.c}, \hyperpage{14}
+    \subitem {main}, \hyperpage{14}
+  \item {ficha3\_5.c}, \hyperpage{15, 16}
+    \subitem {main}, \hyperpage{15}
+  \item {ficha3\_6.c}, \hyperpage{16, 17}
+    \subitem {main}, \hyperpage{16}
+  \item {ficha4\_2.c}, \hyperpage{17, 18}
+    \subitem {main}, \hyperpage{18}
+  \item {ficha4\_2\_copy.c}, \hyperpage{19, 20}
+    \subitem {main}, \hyperpage{19}
+  \item {ficha5\_3.c}, \hyperpage{20}, \hyperpage{23}
+    \subitem {main}, \hyperpage{21}
+    \subitem {MAX\_LINE\_SIZE}, \hyperpage{21}
+    \subitem {readln}, \hyperpage{22}
+
+  \indexspace
+
+  \item {io.c}, \hyperpage{23}, \hyperpage{25}
+    \subitem {convert\_argv\_to\_v}, \hyperpage{24}
+    \subitem {readln}, \hyperpage{24}
+
+  \indexspace
+
+  \item {linux.h}, \hyperpage{25, 26}
+
+  \indexspace
+
+  \item {main}
+    \subitem {call\_by\_string.c}, \hyperpage{3}
+    \subitem {ficha2\_2.c}, \hyperpage{5}
+    \subitem {ficha2\_3.c}, \hyperpage{6}
+    \subitem {ficha2\_4.c}, \hyperpage{8}
+    \subitem {ficha2\_5.c}, \hyperpage{9}
+    \subitem {ficha3\_1.c}, \hyperpage{10}
+    \subitem {ficha3\_2.c}, \hyperpage{11}
+    \subitem {ficha3\_3.c}, \hyperpage{13}
+    \subitem {ficha3\_4.c}, \hyperpage{14}
+    \subitem {ficha3\_5.c}, \hyperpage{15}
+    \subitem {ficha3\_6.c}, \hyperpage{16}
+    \subitem {ficha4\_2.c}, \hyperpage{18}
+    \subitem {ficha4\_2\_copy.c}, \hyperpage{19}
+    \subitem {ficha5\_3.c}, \hyperpage{21}
+  \item {MAX\_LINE\_SIZE}
+    \subitem {ficha5\_3.c}, \hyperpage{21}
+
+  \indexspace
+
+  \item {pid.c}, \hyperpage{26}, \hyperpage{28}
+    \subitem {print\_child\_report}, \hyperpage{27}
+    \subitem {print\_father}, \hyperpage{27}
+    \subitem {print\_father\_report}, \hyperpage{27}
+    \subitem {print\_pid}, \hyperpage{27}
+  \item {pid.h}, \hyperpage{28, 29}
+    \subitem {print\_child\_report}, \hyperpage{28}
+    \subitem {print\_father}, \hyperpage{29}
+    \subitem {print\_father\_report}, \hyperpage{29}
+    \subitem {print\_pid}, \hyperpage{29}
+  \item {print\_child\_report}
+    \subitem {pid.c}, \hyperpage{27}
+    \subitem {pid.h}, \hyperpage{28}
+  \item {print\_father}
+    \subitem {pid.c}, \hyperpage{27}
+    \subitem {pid.h}, \hyperpage{29}
+  \item {print\_father\_report}
+    \subitem {pid.c}, \hyperpage{27}
+    \subitem {pid.h}, \hyperpage{29}
+  \item {print\_pid}
+    \subitem {pid.c}, \hyperpage{27}
+    \subitem {pid.h}, \hyperpage{29}
+
+  \indexspace
+
+  \item {readln}
+    \subitem {ficha5\_3.c}, \hyperpage{22}
+    \subitem {io.c}, \hyperpage{24}
+
+\end{theindex}

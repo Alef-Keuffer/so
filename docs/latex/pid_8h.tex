@@ -1,0 +1,99 @@
+\hypertarget{pid_8h}{}\doxysection{pid.\+h File Reference}
+\label{pid_8h}\index{pid.h@{pid.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{pid_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{pid_8h_a83bf6c2d1d81e88236e89440dfed8f39}{print\+\_\+pid}} (void)
+\item 
+int \mbox{\hyperlink{pid_8h_a6184080165e49f38b6ec55ae36771b74}{print\+\_\+father}} (void)
+\item 
+int \mbox{\hyperlink{pid_8h_a1de2f412bb1bfbb6889b28ae1503e476}{print\+\_\+child\+\_\+report}} (void)
+\item 
+int \mbox{\hyperlink{pid_8h_a136daf5c43c5b1a73a87f7858b8ca04d}{print\+\_\+father\+\_\+report}} (pid\+\_\+t, int)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{pid_8h_a1de2f412bb1bfbb6889b28ae1503e476}\label{pid_8h_a1de2f412bb1bfbb6889b28ae1503e476}} 
+\index{pid.h@{pid.h}!print\_child\_report@{print\_child\_report}}
+\index{print\_child\_report@{print\_child\_report}!pid.h@{pid.h}}
+\doxysubsubsection{\texorpdfstring{print\_child\_report()}{print\_child\_report()}}
+{\footnotesize\ttfamily int print\+\_\+child\+\_\+report (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pid_8c_source_l00015}{15}} of file \mbox{\hyperlink{pid_8c_source}{pid.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016 \{}
+\DoxyCodeLine{00017       fprintf (stderr, \textcolor{stringliteral}{"My father's PID: \%d\(\backslash\)nMy PID: \%d\(\backslash\)n"}, getppid (), getpid ());}
+\DoxyCodeLine{00018   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00019 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{ficha2__2_8c_source_l00004}{main()}}.
+
+\mbox{\Hypertarget{pid_8h_a6184080165e49f38b6ec55ae36771b74}\label{pid_8h_a6184080165e49f38b6ec55ae36771b74}} 
+\index{pid.h@{pid.h}!print\_father@{print\_father}}
+\index{print\_father@{print\_father}!pid.h@{pid.h}}
+\doxysubsubsection{\texorpdfstring{print\_father()}{print\_father()}}
+{\footnotesize\ttfamily int print\+\_\+father (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pid_8c_source_l00010}{10}} of file \mbox{\hyperlink{pid_8c_source}{pid.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011 \{}
+\DoxyCodeLine{00012   printf (\textcolor{stringliteral}{"My father's PID: \%d\(\backslash\)n"}, getppid ());}
+\DoxyCodeLine{00013   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00014 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{pid_8h_a136daf5c43c5b1a73a87f7858b8ca04d}\label{pid_8h_a136daf5c43c5b1a73a87f7858b8ca04d}} 
+\index{pid.h@{pid.h}!print\_father\_report@{print\_father\_report}}
+\index{print\_father\_report@{print\_father\_report}!pid.h@{pid.h}}
+\doxysubsubsection{\texorpdfstring{print\_father\_report()}{print\_father\_report()}}
+{\footnotesize\ttfamily int print\+\_\+father\+\_\+report (\begin{DoxyParamCaption}\item[{pid\+\_\+t}]{,  }\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pid_8c_source_l00021}{21}} of file \mbox{\hyperlink{pid_8c_source}{pid.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022 \{}
+\DoxyCodeLine{00023   fprintf (stderr, \textcolor{stringliteral}{"Filho \%d saiu com código \%d\(\backslash\)n"}, pid, exit\_code);}
+\DoxyCodeLine{00024   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00025 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{pid_8h_a83bf6c2d1d81e88236e89440dfed8f39}\label{pid_8h_a83bf6c2d1d81e88236e89440dfed8f39}} 
+\index{pid.h@{pid.h}!print\_pid@{print\_pid}}
+\index{print\_pid@{print\_pid}!pid.h@{pid.h}}
+\doxysubsubsection{\texorpdfstring{print\_pid()}{print\_pid()}}
+{\footnotesize\ttfamily int print\+\_\+pid (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pid_8c_source_l00005}{5}} of file \mbox{\hyperlink{pid_8c_source}{pid.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006 \{}
+\DoxyCodeLine{00007   printf (\textcolor{stringliteral}{"My PID: \%d\(\backslash\)n"}, getpid ());}
+\DoxyCodeLine{00008   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00009 \}}
+
+\end{DoxyCode}

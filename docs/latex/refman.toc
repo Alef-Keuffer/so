@@ -1,0 +1,85 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}File Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}File List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}File Documentation}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}call\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}by\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}string.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{3}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Function Documentation}{3}{subsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.1.1}main()}{4}{subsubsection.2.1.1.1}%
+\contentsline {section}{\numberline {2.2}call\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}by\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}string.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{4}{section.2.2}%
+\contentsline {section}{\numberline {2.3}ficha2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{5}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Function Documentation}{5}{subsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.1.1}main()}{5}{subsubsection.2.3.1.1}%
+\contentsline {section}{\numberline {2.4}ficha2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{6}{section.2.4}%
+\contentsline {section}{\numberline {2.5}ficha2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}3.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{6}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Function Documentation}{6}{subsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.1.1}main()}{6}{subsubsection.2.5.1.1}%
+\contentsline {section}{\numberline {2.6}ficha2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}3.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{7}{section.2.6}%
+\contentsline {section}{\numberline {2.7}ficha2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}4.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{7}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Function Documentation}{8}{subsection.2.7.1}%
+\contentsline {subsubsection}{\numberline {2.7.1.1}main()}{8}{subsubsection.2.7.1.1}%
+\contentsline {section}{\numberline {2.8}ficha2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}4.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{8}{section.2.8}%
+\contentsline {section}{\numberline {2.9}ficha2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}5.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{8}{section.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}Function Documentation}{9}{subsection.2.9.1}%
+\contentsline {subsubsection}{\numberline {2.9.1.1}main()}{9}{subsubsection.2.9.1.1}%
+\contentsline {section}{\numberline {2.10}ficha2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}5.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{10}{section.2.10}%
+\contentsline {section}{\numberline {2.11}ficha3\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{10}{section.2.11}%
+\contentsline {subsection}{\numberline {2.11.1}Function Documentation}{10}{subsection.2.11.1}%
+\contentsline {subsubsection}{\numberline {2.11.1.1}main()}{11}{subsubsection.2.11.1.1}%
+\contentsline {section}{\numberline {2.12}ficha3\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{11}{section.2.12}%
+\contentsline {section}{\numberline {2.13}ficha3\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{11}{section.2.13}%
+\contentsline {subsection}{\numberline {2.13.1}Function Documentation}{11}{subsection.2.13.1}%
+\contentsline {subsubsection}{\numberline {2.13.1.1}main()}{12}{subsubsection.2.13.1.1}%
+\contentsline {section}{\numberline {2.14}ficha3\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{12}{section.2.14}%
+\contentsline {section}{\numberline {2.15}ficha3\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}3.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{12}{section.2.15}%
+\contentsline {subsection}{\numberline {2.15.1}Function Documentation}{13}{subsection.2.15.1}%
+\contentsline {subsubsection}{\numberline {2.15.1.1}main()}{13}{subsubsection.2.15.1.1}%
+\contentsline {section}{\numberline {2.16}ficha3\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}3.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{13}{section.2.16}%
+\contentsline {section}{\numberline {2.17}ficha3\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}4.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{14}{section.2.17}%
+\contentsline {subsection}{\numberline {2.17.1}Function Documentation}{14}{subsection.2.17.1}%
+\contentsline {subsubsection}{\numberline {2.17.1.1}main()}{14}{subsubsection.2.17.1.1}%
+\contentsline {section}{\numberline {2.18}ficha3\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}4.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{14}{section.2.18}%
+\contentsline {section}{\numberline {2.19}ficha3\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}5.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{15}{section.2.19}%
+\contentsline {subsection}{\numberline {2.19.1}Function Documentation}{15}{subsection.2.19.1}%
+\contentsline {subsubsection}{\numberline {2.19.1.1}main()}{15}{subsubsection.2.19.1.1}%
+\contentsline {section}{\numberline {2.20}ficha3\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}5.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{16}{section.2.20}%
+\contentsline {section}{\numberline {2.21}ficha3\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}6.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{16}{section.2.21}%
+\contentsline {subsection}{\numberline {2.21.1}Function Documentation}{16}{subsection.2.21.1}%
+\contentsline {subsubsection}{\numberline {2.21.1.1}main()}{17}{subsubsection.2.21.1.1}%
+\contentsline {section}{\numberline {2.22}ficha3\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}6.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{17}{section.2.22}%
+\contentsline {section}{\numberline {2.23}ficha4\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{17}{section.2.23}%
+\contentsline {subsection}{\numberline {2.23.1}Function Documentation}{18}{subsection.2.23.1}%
+\contentsline {subsubsection}{\numberline {2.23.1.1}main()}{18}{subsubsection.2.23.1.1}%
+\contentsline {section}{\numberline {2.24}ficha4\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{18}{section.2.24}%
+\contentsline {section}{\numberline {2.25}ficha4\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}copy.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{19}{section.2.25}%
+\contentsline {subsection}{\numberline {2.25.1}Function Documentation}{19}{subsection.2.25.1}%
+\contentsline {subsubsection}{\numberline {2.25.1.1}main()}{19}{subsubsection.2.25.1.1}%
+\contentsline {section}{\numberline {2.26}ficha4\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}copy.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{20}{section.2.26}%
+\contentsline {section}{\numberline {2.27}ficha5\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}3.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{20}{section.2.27}%
+\contentsline {subsection}{\numberline {2.27.1}Macro Definition Documentation}{21}{subsection.2.27.1}%
+\contentsline {subsubsection}{\numberline {2.27.1.1}MAX\_LINE\_SIZE}{21}{subsubsection.2.27.1.1}%
+\contentsline {subsection}{\numberline {2.27.2}Function Documentation}{21}{subsection.2.27.2}%
+\contentsline {subsubsection}{\numberline {2.27.2.1}main()}{22}{subsubsection.2.27.2.1}%
+\contentsline {subsubsection}{\numberline {2.27.2.2}readln()}{22}{subsubsection.2.27.2.2}%
+\contentsline {section}{\numberline {2.28}ficha5\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}3.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{23}{section.2.28}%
+\contentsline {section}{\numberline {2.29}io.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{23}{section.2.29}%
+\contentsline {subsection}{\numberline {2.29.1}Function Documentation}{24}{subsection.2.29.1}%
+\contentsline {subsubsection}{\numberline {2.29.1.1}convert\_argv\_to\_v()}{24}{subsubsection.2.29.1.1}%
+\contentsline {subsubsection}{\numberline {2.29.1.2}readln()}{25}{subsubsection.2.29.1.2}%
+\contentsline {section}{\numberline {2.30}io.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{25}{section.2.30}%
+\contentsline {section}{\numberline {2.31}linux.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{25}{section.2.31}%
+\contentsline {section}{\numberline {2.32}linux.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{26}{section.2.32}%
+\contentsline {section}{\numberline {2.33}pid.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{26}{section.2.33}%
+\contentsline {subsection}{\numberline {2.33.1}Function Documentation}{27}{subsection.2.33.1}%
+\contentsline {subsubsection}{\numberline {2.33.1.1}print\_child\_report()}{27}{subsubsection.2.33.1.1}%
+\contentsline {subsubsection}{\numberline {2.33.1.2}print\_father()}{27}{subsubsection.2.33.1.2}%
+\contentsline {subsubsection}{\numberline {2.33.1.3}print\_father\_report()}{27}{subsubsection.2.33.1.3}%
+\contentsline {subsubsection}{\numberline {2.33.1.4}print\_pid()}{27}{subsubsection.2.33.1.4}%
+\contentsline {section}{\numberline {2.34}pid.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{28}{section.2.34}%
+\contentsline {section}{\numberline {2.35}pid.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{28}{section.2.35}%
+\contentsline {subsection}{\numberline {2.35.1}Function Documentation}{28}{subsection.2.35.1}%
+\contentsline {subsubsection}{\numberline {2.35.1.1}print\_child\_report()}{29}{subsubsection.2.35.1.1}%
+\contentsline {subsubsection}{\numberline {2.35.1.2}print\_father()}{29}{subsubsection.2.35.1.2}%
+\contentsline {subsubsection}{\numberline {2.35.1.3}print\_father\_report()}{29}{subsubsection.2.35.1.3}%
+\contentsline {subsubsection}{\numberline {2.35.1.4}print\_pid()}{29}{subsubsection.2.35.1.4}%
+\contentsline {section}{\numberline {2.36}pid.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{29}{section.2.36}%
+\contentsline {chapter}{Index}{31}{section*.37}%

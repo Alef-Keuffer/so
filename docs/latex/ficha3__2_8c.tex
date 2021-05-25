@@ -1,0 +1,54 @@
+\hypertarget{ficha3__2_8c}{}\doxysection{ficha3\+\_\+2.\+c File Reference}
+\label{ficha3__2_8c}\index{ficha3\_2.c@{ficha3\_2.c}}
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$sys/wait.\+h$>$}\newline
+Include dependency graph for ficha3\+\_\+2.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{ficha3__2_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{ficha3__2_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ficha3__2_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{ficha3__2_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{ficha3\_2.c@{ficha3\_2.c}!main@{main}}
+\index{main@{main}!ficha3\_2.c@{ficha3\_2.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ficha3__2_8c_source_l00004}{4}} of file \mbox{\hyperlink{ficha3__2_8c_source}{ficha3\+\_\+2.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005 \{}
+\DoxyCodeLine{00006   \textcolor{keywordtype}{int} status;}
+\DoxyCodeLine{00007   \textcolor{keywordtype}{char} *exec\_args[] = \{\textcolor{stringliteral}{""}, \textcolor{stringliteral}{"-\/l"}, NULL\};}
+\DoxyCodeLine{00008   pid\_t fork\_ret = fork ();}
+\DoxyCodeLine{00009   \textcolor{keywordflow}{if} (fork\_ret == 0)}
+\DoxyCodeLine{00010     \{}
+\DoxyCodeLine{00011       fprintf (stderr, \textcolor{stringliteral}{"PID do filho \%d\(\backslash\)n"}, getpid ());}
+\DoxyCodeLine{00012       \textcolor{keywordtype}{int} exec\_ret = execvp (\textcolor{stringliteral}{"/bin/ls"}, exec\_args);}
+\DoxyCodeLine{00013       fprintf (stderr, \textcolor{stringliteral}{"Se tudo ocorreu bem, esse printf nunca acontece\(\backslash\)n"});}
+\DoxyCodeLine{00014       perror (\textcolor{stringliteral}{"Erro de exec"});}
+\DoxyCodeLine{00015       \_exit (exec\_ret);}
+\DoxyCodeLine{00016     \}}
+\DoxyCodeLine{00017   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00018     \{}
+\DoxyCodeLine{00019       fprintf (stderr, \textcolor{stringliteral}{"PID do pai \%d\(\backslash\)n"}, getpid ());}
+\DoxyCodeLine{00020       \textcolor{keywordtype}{int} wait\_ret = wait (\&status);}
+\DoxyCodeLine{00021       fprintf (stderr, \textcolor{stringliteral}{"O filho retornou \%d\(\backslash\)n"}, WEXITSTATUS(status));}
+\DoxyCodeLine{00022     \}}
+\DoxyCodeLine{00023   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00024 \}}
+
+\end{DoxyCode}

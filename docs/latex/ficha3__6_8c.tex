@@ -1,0 +1,44 @@
+\hypertarget{ficha3__6_8c}{}\doxysection{ficha3\+\_\+6.\+c File Reference}
+\label{ficha3__6_8c}\index{ficha3\_6.c@{ficha3\_6.c}}
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for ficha3\+\_\+6.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{ficha3__6_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{ficha3__6_8c_a616ed10308766ef2c6a2b4aeb08b4982}{main}} (char $\ast$command\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ficha3__6_8c_a616ed10308766ef2c6a2b4aeb08b4982}\label{ficha3__6_8c_a616ed10308766ef2c6a2b4aeb08b4982}} 
+\index{ficha3\_6.c@{ficha3\_6.c}!main@{main}}
+\index{main@{main}!ficha3\_6.c@{ficha3\_6.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{char $\ast$}]{command\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ficha3__6_8c_source_l00004}{4}} of file \mbox{\hyperlink{ficha3__6_8c_source}{ficha3\+\_\+6.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004                          \{}
+\DoxyCodeLine{00005   \textcolor{keywordtype}{int} fork\_ret, exec\_ret, wait\_ret, status, res;}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007   \textcolor{keywordtype}{char} *exec\_args[1024];}
+\DoxyCodeLine{00008   \textcolor{keywordtype}{char}*string;}
+\DoxyCodeLine{00009   \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011   \textcolor{keywordtype}{string} = strtok(command, \textcolor{stringliteral}{" "});}
+\DoxyCodeLine{00012   \textcolor{keywordflow}{while} (\textcolor{keywordtype}{string} != NULL)\{}
+\DoxyCodeLine{00013     exec\_args[i] = string;}
+\DoxyCodeLine{00014   \}}
+\DoxyCodeLine{00015 \}}
+
+\end{DoxyCode}

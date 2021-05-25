@@ -1,0 +1,58 @@
+\hypertarget{ficha2__5_8c}{}\doxysection{ficha2\+\_\+5.\+c File Reference}
+\label{ficha2__5_8c}\index{ficha2\_5.c@{ficha2\_5.c}}
+{\ttfamily \#include $<$sys/wait.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for ficha2\+\_\+5.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{ficha2__5_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{ficha2__5_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Cria (dez) filhos em profundidade. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ficha2__5_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{ficha2__5_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{ficha2\_5.c@{ficha2\_5.c}!main@{main}}
+\index{main@{main}!ficha2\_5.c@{ficha2\_5.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cria (dez) filhos em profundidade. 
+
+Cada processo imprime seu P\+ID e o P\+ID de seu pai.
+
+O programa vai até o 10º nível de profundidade. 
+
+Definition at line \mbox{\hyperlink{ficha2__5_8c_source_l00012}{12}} of file \mbox{\hyperlink{ficha2__5_8c_source}{ficha2\+\_\+5.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012            \{}
+\DoxyCodeLine{00013     \textcolor{keywordtype}{int} status;}
+\DoxyCodeLine{00014     \textcolor{keywordtype}{int} nFilhos = 10;}
+\DoxyCodeLine{00015     \textcolor{comment}{/* The starting process. */}}
+\DoxyCodeLine{00016     fprintf(stderr, \textcolor{stringliteral}{"My father's PID: \%d\(\backslash\)nMy PID: \%d\(\backslash\)nIteration: \%d\(\backslash\)n\(\backslash\)n"}, getppid(), getpid(), -\/1);}
+\DoxyCodeLine{00017     \textcolor{comment}{/* Creation of nFilhos process. */}}
+\DoxyCodeLine{00018     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < nFilhos; i++) \{}
+\DoxyCodeLine{00019         \textcolor{keywordflow}{if} (fork() == 0) \{\textcolor{comment}{// Child does something}}
+\DoxyCodeLine{00020             fprintf(stderr, \textcolor{stringliteral}{"My father's PID: \%d\(\backslash\)nMy PID: \%d\(\backslash\)nIteration: \%d\(\backslash\)n\(\backslash\)n"}, getppid(), getpid(), i);}
+\DoxyCodeLine{00021         \} \textcolor{keywordflow}{else} \{\textcolor{comment}{// Parent does something}}
+\DoxyCodeLine{00022             pid\_t terminated = wait(\&status);}
+\DoxyCodeLine{00023             fprintf(stderr, \textcolor{stringliteral}{"[Pai (my PID is \%d)] process \%d. Exit with code \%d\(\backslash\)nIteration: \%d\(\backslash\)n\(\backslash\)n"},}
+\DoxyCodeLine{00024                     getpid(), terminated, WEXITSTATUS(status), i);}
+\DoxyCodeLine{00025             \_exit(0);}
+\DoxyCodeLine{00026         \}}
+\DoxyCodeLine{00027     \}}
+\DoxyCodeLine{00028     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00029 \}}
+
+\end{DoxyCode}

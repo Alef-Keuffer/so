@@ -1,0 +1,21 @@
+\hypertarget{ficha3__6_8c_source}{}\doxysection{ficha3\+\_\+6.\+c}
+\label{ficha3__6_8c_source}\index{ficha3\_6.c@{ficha3\_6.c}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{00002 \textcolor{comment}{// tirei foto, checar screenshot}}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{\Hypertarget{ficha3__6_8c_source_l00004}\mbox{\hyperlink{ficha3__6_8c_a616ed10308766ef2c6a2b4aeb08b4982}{00004}} \textcolor{keywordtype}{int} \mbox{\hyperlink{ficha3__6_8c_a616ed10308766ef2c6a2b4aeb08b4982}{main}}(\textcolor{keywordtype}{char}* command[])\{}
+\DoxyCodeLine{00005   \textcolor{keywordtype}{int} fork\_ret, exec\_ret, wait\_ret, status, res;}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007   \textcolor{keywordtype}{char} *exec\_args[1024];}
+\DoxyCodeLine{00008   \textcolor{keywordtype}{char}*string;}
+\DoxyCodeLine{00009   \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011   \textcolor{keywordtype}{string} = strtok(command, \textcolor{stringliteral}{" "});}
+\DoxyCodeLine{00012   \textcolor{keywordflow}{while} (\textcolor{keywordtype}{string} != NULL)\{}
+\DoxyCodeLine{00013     exec\_args[i] = string;}
+\DoxyCodeLine{00014   \}}
+\DoxyCodeLine{00015 \}}
+
+\end{DoxyCode}

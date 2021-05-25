@@ -1,0 +1,31 @@
+\hypertarget{pid_8c_source}{}\doxysection{pid.\+c}
+\label{pid_8c_source}\index{pid.c@{pid.c}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include "\mbox{\hyperlink{pid_8h}{pid.h}}"}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{\Hypertarget{pid_8c_source_l00005}\mbox{\hyperlink{pid_8h_a83bf6c2d1d81e88236e89440dfed8f39}{00005}} \textcolor{keywordtype}{int} \mbox{\hyperlink{pid_8c_a83bf6c2d1d81e88236e89440dfed8f39}{print\_pid}} (\textcolor{keywordtype}{void})}
+\DoxyCodeLine{00006 \{}
+\DoxyCodeLine{00007   printf (\textcolor{stringliteral}{"My PID: \%d\(\backslash\)n"}, getpid ());}
+\DoxyCodeLine{00008   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00009 \}}
+\DoxyCodeLine{\Hypertarget{pid_8c_source_l00010}\mbox{\hyperlink{pid_8h_a6184080165e49f38b6ec55ae36771b74}{00010}} \textcolor{keywordtype}{int} \mbox{\hyperlink{pid_8c_a6184080165e49f38b6ec55ae36771b74}{print\_father}} (\textcolor{keywordtype}{void})}
+\DoxyCodeLine{00011 \{}
+\DoxyCodeLine{00012   printf (\textcolor{stringliteral}{"My father's PID: \%d\(\backslash\)n"}, getppid ());}
+\DoxyCodeLine{00013   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00014 \}}
+\DoxyCodeLine{\Hypertarget{pid_8c_source_l00015}\mbox{\hyperlink{pid_8h_a1de2f412bb1bfbb6889b28ae1503e476}{00015}} \textcolor{keywordtype}{int} \mbox{\hyperlink{pid_8c_a1de2f412bb1bfbb6889b28ae1503e476}{print\_child\_report}} (\textcolor{keywordtype}{void})}
+\DoxyCodeLine{00016 \{}
+\DoxyCodeLine{00017       fprintf (stderr, \textcolor{stringliteral}{"My father's PID: \%d\(\backslash\)nMy PID: \%d\(\backslash\)n"}, getppid (), getpid ());}
+\DoxyCodeLine{00018   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00019 \}}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{\Hypertarget{pid_8c_source_l00021}\mbox{\hyperlink{pid_8h_a136daf5c43c5b1a73a87f7858b8ca04d}{00021}} \textcolor{keywordtype}{int} \mbox{\hyperlink{pid_8c_a4b685e6af6e906624d5fd38ec788f6b8}{print\_father\_report}} (pid\_t pid, \textcolor{keywordtype}{int} exit\_code)}
+\DoxyCodeLine{00022 \{}
+\DoxyCodeLine{00023   fprintf (stderr, \textcolor{stringliteral}{"Filho \%d saiu com código \%d\(\backslash\)n"}, pid, exit\_code);}
+\DoxyCodeLine{00024   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00025 \}}
+
+\end{DoxyCode}

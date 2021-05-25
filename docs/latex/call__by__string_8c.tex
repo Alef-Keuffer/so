@@ -1,0 +1,71 @@
+\hypertarget{call__by__string_8c}{}\doxysection{call\+\_\+by\+\_\+string.\+c File Reference}
+\label{call__by__string_8c}\index{call\_by\_string.c@{call\_by\_string.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$dlfcn.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for call\+\_\+by\+\_\+string.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{call__by__string_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{call__by__string_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{call__by__string_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{call__by__string_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{call\_by\_string.c@{call\_by\_string.c}!main@{main}}
+\index{main@{main}!call\_by\_string.c@{call\_by\_string.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{call__by__string_8c_source_l00006}{6}} of file \mbox{\hyperlink{call__by__string_8c_source}{call\+\_\+by\+\_\+string.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007 \{}
+\DoxyCodeLine{00008   \textcolor{keywordtype}{void} *handle;}
+\DoxyCodeLine{00009   \textcolor{keywordtype}{char} *error;}
+\DoxyCodeLine{00010   double (*cosine) (double);}
+\DoxyCodeLine{00011   int (*func) (int, \textcolor{keywordtype}{char}*[]);}
+\DoxyCodeLine{00012 }
+\DoxyCodeLine{00013   \textcolor{keywordtype}{char} command[1024];}
+\DoxyCodeLine{00014   handle = dlopen (\textcolor{stringliteral}{"/home/alef/Documents/coding/c/so/cmake-\/build-\/debug/libfichas.so"}, RTLD\_LAZY);}
+\DoxyCodeLine{00015   \textcolor{keywordflow}{if} (!handle)}
+\DoxyCodeLine{00016     \{}
+\DoxyCodeLine{00017       fprintf (stderr, \textcolor{stringliteral}{"\%s\(\backslash\)n"}, dlerror ());}
+\DoxyCodeLine{00018       exit (EXIT\_FAILURE);}
+\DoxyCodeLine{00019     \}}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021   dlerror ();    \textcolor{comment}{/* Clear any existing error */}}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{00023   \textcolor{comment}{/* Writing: cosine = (double (*)(double)) dlsym(handle, "cos");}}
+\DoxyCodeLine{00024 \textcolor{comment}{     would seem more natural, but the C99 standard leaves}}
+\DoxyCodeLine{00025 \textcolor{comment}{     casting from "void *" to a function pointer undefined.}}
+\DoxyCodeLine{00026 \textcolor{comment}{     The assignment used below is the POSIX.1-\/2003 (Technical}}
+\DoxyCodeLine{00027 \textcolor{comment}{     Corrigendum 1) workaround; see the Rationale for the}}
+\DoxyCodeLine{00028 \textcolor{comment}{     POSIX specification of dlsym(). */}}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{00030   \textcolor{comment}{//*(void **)(\&cosine) = dlsym (handle, "cos");}}
+\DoxyCodeLine{00031   *(\textcolor{keywordtype}{void} **)(\&func) = dlsym (handle, argv[1]);}
+\DoxyCodeLine{00032   \textcolor{keywordflow}{if} ((error = dlerror ()) != NULL)}
+\DoxyCodeLine{00033     \{}
+\DoxyCodeLine{00034       fprintf (stderr, \textcolor{stringliteral}{"\%s\(\backslash\)n"}, error);}
+\DoxyCodeLine{00035       exit (EXIT\_FAILURE);}
+\DoxyCodeLine{00036     \}}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038   (*func) (argc, argv);}
+\DoxyCodeLine{00039 }
+\DoxyCodeLine{00040   dlclose (handle);}
+\DoxyCodeLine{00041   exit (EXIT\_SUCCESS);}
+\DoxyCodeLine{00042 \}}
+
+\end{DoxyCode}

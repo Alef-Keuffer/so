@@ -1,0 +1,46 @@
+\hypertarget{ficha4__2_8c_source}{}\doxysection{ficha4\+\_\+2.\+c}
+\label{ficha4__2_8c_source}\index{ficha4\_2.c@{ficha4\_2.c}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include <fcntl.h>}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{\Hypertarget{ficha4__2_8c_source_l00005}\mbox{\hyperlink{ficha4__2_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{00005}} \textcolor{keywordtype}{int} \mbox{\hyperlink{ficha4__2_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()}
+\DoxyCodeLine{00006 \{}
+\DoxyCodeLine{00007   \textcolor{keywordtype}{int} i\_fd = open (\textcolor{stringliteral}{"/etc/passwd"}, O\_RDONLY);}
+\DoxyCodeLine{00008   \textcolor{keywordtype}{int} o\_fd = open (\textcolor{stringliteral}{"saida.txt"}, O\_CREAT | O\_RDWR, 0666);}
+\DoxyCodeLine{00009   \textcolor{keywordtype}{int} e\_fd = open (\textcolor{stringliteral}{"erros.txt"}, O\_CREAT | O\_RDWR, 0666);}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011   dup2 (i\_fd, STDIN\_FILENO);}
+\DoxyCodeLine{00012   dup2 (o\_fd, STDOUT\_FILENO);}
+\DoxyCodeLine{00013   dup2 (e\_fd, STDERR\_FILENO);}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{00015   close (i\_fd);}
+\DoxyCodeLine{00016   close (e\_fd);}
+\DoxyCodeLine{00017   close (o\_fd);}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{00019   \textcolor{keywordtype}{int} n\_lines = 10;}
+\DoxyCodeLine{00020   \textcolor{keywordtype}{char} buffer;}
+\DoxyCodeLine{00021   \textcolor{keywordtype}{char} line[1024];}
+\DoxyCodeLine{00022   \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{00023   \textcolor{keywordflow}{while} (n\_lines > 0)}
+\DoxyCodeLine{00024     \{}
+\DoxyCodeLine{00025       \textcolor{keywordflow}{while} (read (0, \&buffer, 1) != 0)}
+\DoxyCodeLine{00026         \{}
+\DoxyCodeLine{00027           line[i] = buffer;}
+\DoxyCodeLine{00028           i++;}
+\DoxyCodeLine{00029           \textcolor{keywordflow}{if} (buffer == \textcolor{charliteral}{'\(\backslash\)n'})}
+\DoxyCodeLine{00030             \{}
+\DoxyCodeLine{00031               \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00032             \}}
+\DoxyCodeLine{00033         \}}
+\DoxyCodeLine{00034       write (1, line, i);}
+\DoxyCodeLine{00035       write (2, line, i);}
+\DoxyCodeLine{00036       i = 0;}
+\DoxyCodeLine{00037       n\_lines-\/-\/;}
+\DoxyCodeLine{00038     \}}
+\DoxyCodeLine{00039   \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00040 \}}
+
+\end{DoxyCode}

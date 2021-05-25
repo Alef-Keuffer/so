@@ -1,0 +1,26 @@
+\hypertarget{ficha2__4_8c_source}{}\doxysection{ficha2\+\_\+4.\+c}
+\label{ficha2__4_8c_source}\index{ficha2\_4.c@{ficha2\_4.c}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include <sys/wait.h>} \textcolor{comment}{// for wait()}}
+\DoxyCodeLine{00002 \textcolor{preprocessor}{\#include <unistd.h>} \textcolor{comment}{// for fork()}}
+\DoxyCodeLine{00003 \textcolor{preprocessor}{\#include <stdio.h>} \textcolor{comment}{// for fprintf()}}
+\DoxyCodeLine{00004 }
+\DoxyCodeLine{\Hypertarget{ficha2__4_8c_source_l00011}\mbox{\hyperlink{ficha2__4_8c_a840291bc02cba5474a4cb46a9b9566fe}{00011}} \textcolor{keywordtype}{int} \mbox{\hyperlink{ficha2__4_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{void}) \{}
+\DoxyCodeLine{00012     \textcolor{keywordtype}{int} status;}
+\DoxyCodeLine{00013     \textcolor{keywordtype}{int} nFilhos = 10;}
+\DoxyCodeLine{00014     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < nFilhos; i++) \{\textcolor{comment}{// Child does something}}
+\DoxyCodeLine{00015         \textcolor{keywordflow}{if} (fork() == 0) \{}
+\DoxyCodeLine{00016             fprintf(stderr, \textcolor{stringliteral}{"My father's PID: \%d\(\backslash\)nMy PID: \%d\(\backslash\)n\(\backslash\)n"}, getppid(), getpid());}
+\DoxyCodeLine{00017             \_exit(i);}
+\DoxyCodeLine{00018         \}}
+\DoxyCodeLine{00019     \}}
+\DoxyCodeLine{00020     \textcolor{comment}{/* Parent waits each child and prints than immediately */}}
+\DoxyCodeLine{00021     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \_ = 0; \_ < nFilhos; \_++) \{\textcolor{comment}{//Parent does something}}
+\DoxyCodeLine{00022         pid\_t wait\_ret = wait(\&status);}
+\DoxyCodeLine{00023         fprintf(stderr, \textcolor{stringliteral}{"Filho \%d acabou com código \%d\(\backslash\)n\(\backslash\)n"}, wait\_ret, WEXITSTATUS(status));}
+\DoxyCodeLine{00024     \}}
+\DoxyCodeLine{00025     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{00026 \}}
+
+\end{DoxyCode}
